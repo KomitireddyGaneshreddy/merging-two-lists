@@ -1,0 +1,36 @@
+l1=[6,9,76]
+l2=[3,8,62]
+
+n=len(l1)
+m=len(l2)
+
+l=[None] * (n + m)
+i=0
+j=0
+k=0
+while(i<n and j<m):
+    if l1[i]<l2[j]:
+        #l[k]=l1[i]
+        l.append(l1[i])
+        i=i+1
+        k=k+1
+        
+    elif l1[i]>l2[j]:
+        #l[k]=l2[j]
+        l.append(l2[j])
+        j=j+1
+        k=k+1
+        
+    
+while i<n:
+    l.append(l1[i])
+    #l[k]=l1[i]
+    i=i+1
+    k=k+1
+while j<m:
+    l.append(l2[j])
+    #l[k]=l2[j]
+    #l.insert(l2[j],k)
+    j=j+1
+    k=k+1
+print(l)
